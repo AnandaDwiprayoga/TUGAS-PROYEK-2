@@ -2,10 +2,11 @@
 <html lang="en">
 
 <head>
-<?php $this->load->view("user/template/head.php") ?>
+<?php $this->load->view("user/template/head.php"); ?>
 </head>
 
 <body>
+  
 
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top header-transparent">
@@ -170,170 +171,35 @@
       <div class=" col-lg-12">
           <ul id="portfolio-flters">
             <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-rumah">Rumah Tangga</li>
-            <li data-filter=".filter-kendaraan">Kendaraan</li>
-            <li data-filter=".filter-outdoor">Outdoor</li>
-            <li data-filter=".filter-event">Event</li>
-            <li data-filter=".filter-kantor">Kantor</li>
+            <?php foreach($kategories as $kategori) : ?>
+              <li data-filter="<?= ".filter-" .   str_replace(' ', '_', $kategori['nama_kategori'])  ?>"><?= $kategori['nama_kategori'] ?></li>
+            <?php endforeach; ?>
           </ul>
         </div>
       </div>
 
       <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+        <?php foreach($barangs as $barang) : ?>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-<?= str_replace(' ', '_', $barang['nama_kategori']) ?>">
+            <div class="portfolio-wrap">
+              <figure>
+                <img src="<?= base_url() . $barang['gambar'] ?>" class="img-fluid my-img-fluid" alt="">
+                <a href="<?php echo base_url() ?>assets/img/portfolio/hand_blender.jpg" data-lightbox="portfolio" data-title="App 1" class="link-preview"><i class="ion ion-eye"></i></a>
+                <a href="portfolio-details.html" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+              </figure>
 
-        <div class="col-lg-4 col-md-6 portfolio-item filter-rumah">
-          <div class="portfolio-wrap">
-            <figure>
-              <img src="<?php echo base_url() ?>assets/img/portfolio/hand_blender.jpg" class="img-fluid" alt="">
-              <a href="<?php echo base_url() ?>assets/img/portfolio/hand_blender.jpg" data-lightbox="portfolio" data-title="App 1" class="link-preview"><i class="ion ion-eye"></i></a>
-              <a href="portfolio-details.html" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-            </figure>
-
-            <div class="portfolio-info">
-              <h4><a href="portfolio-details.html">Hand Blender</a></h4>
-              <p>Rp 20.000/Hari</p>
+              <div class="portfolio-info">
+                <h4><a href="portfolio-details.html"><?= $barang['nama_barang'] ?></a></h4>
+                <p>Rp <?= $barang['harga'] ?>/Hari</p>
+              </div>
             </div>
           </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-outdoor">
-          <div class="portfolio-wrap">
-            <figure>
-              <img src="<?php echo base_url() ?>assets/img/portfolio/bag.jpeg" class="img-fluid" alt="">
-              <a href="<?php echo base_url() ?>assets/img/portfolio/bag.jpeg" class="link-preview venobox" data-gall="portfolioGallery" title="Web 3"><i class="ion ion-eye"></i></a>
-              <a href="portfolio-details.html" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-            </figure>
-
-            <div class="portfolio-info">
-              <h4><a href="portfolio-details.html">Tas Gunung</a></h4>
-              <p>Rp 40.000/Hari</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-outdoor">
-          <div class="portfolio-wrap">
-            <figure>
-              <img src="<?php echo base_url() ?>assets/img/portfolio/bag1.jpeg" class="img-fluid" alt="">
-              <a href="<?php echo base_url() ?>assets/img/portfolio/bag1.jpeg" class="link-preview venobox" data-gall="portfolioGallery" title="Web 3"><i class="ion ion-eye"></i></a>
-              <a href="portfolio-details.html" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-            </figure>
-
-            <div class="portfolio-info">
-              <h4><a href="portfolio-details.html">Tas Gunung Biru</a></h4>
-              <p>Rp 40.000/Hari</p>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-rumah">
-          <div class="portfolio-wrap">
-            <figure>
-              <img src="<?php echo base_url() ?>assets/img/portfolio/vacum.jpg" class="img-fluid" alt="">
-              <a href="<?php echo base_url() ?>assets/img/portfolio/vacum.jpg" class="link-preview venobox" data-gall="portfolioGallery" title="App 2"><i class="ion ion-eye"></i></a>
-              <a href="portfolio-details.html" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-            </figure>
-
-            <div class="portfolio-info">
-              <h4><a href="portfolio-details.html">Vacum Cleaner</a></h4>
-              <p>Rp 30.000/Hari</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-kendaraan">
-          <div class="portfolio-wrap">
-            <figure>
-              <img src="<?php echo base_url() ?>assets/img/portfolio/sepedaa.jpeg" class="img-fluid" alt="">
-              <a href="<?php echo base_url() ?>assets/img/portfolio/sepedaa.jpeg" class="link-preview venobox" data-gall="portfolioGallery" title="Card 2"><i class="ion ion-eye"></i></a>
-              <a href="portfolio-details.html" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-            </figure>
-
-            <div class="portfolio-info">
-              <h4><a href="portfolio-details.html">Sepeda</a></h4>
-              <p>Rp 30.000/Hari</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-outdoor">
-          <div class="portfolio-wrap">
-            <figure>
-              <img src="<?php echo base_url() ?>assets/img/portfolio/tenda2.jpeg" class="img-fluid" alt="">
-              <a href="<?php echo base_url() ?>assets/img/portfolio/tenda2.jpeg" class="link-preview venobox" data-gall="portfolioGallery" title="Web 2"><i class="ion ion-eye"></i></a>
-              <a href="portfolio-details.html" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-            </figure>
-
-            <div class="portfolio-info">
-              <h4><a href="portfolio-details.html">Tenda</a></h4>
-              <p>Rp 50.000/Hari</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-rumah">
-          <div class="portfolio-wrap">
-            <figure>
-              <img src="<?php echo base_url() ?>assets/img/portfolio/sofa.jpg" class="img-fluid" alt="">
-              <a href="<?php echo base_url() ?>assets/img/portfolio/sofa.jpg" class="link-preview venobox" data-gall="portfolioGallery" title="App 3"><i class="ion ion-eye"></i></a>
-              <a href="portfolio-details.html" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-            </figure>
-
-            <div class="portfolio-info">
-              <h4><a href="portfolio-details.html">Sofa</a></h4>
-              <p>Rp 50.000/Hari</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-kantor">
-          <div class="portfolio-wrap">
-            <figure>
-              <img src="<?php echo base_url() ?>assets/img/portfolio/kalkulator.jpg" class="img-fluid" alt="">
-              <a href="<?php echo base_url() ?>assets/img/portfolio/kalkulator.jpg" class="link-preview venobox" data-gall="portfolioGallery" title="Card 1"><i class="ion ion-eye"></i></a>
-              <a href="portfolio-details.html" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-            </figure>
-
-            <div class="portfolio-info">
-              <h4><a href="portfolio-details.html">Kalkulator Casio</a></h4>
-              <p>Rp 10.000/Hari</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-event">
-          <div class="portfolio-wrap">
-            <figure>
-              <img src="<?php echo base_url() ?>assets/img/portfolio/mic.jpg" class="img-fluid" alt="">
-              <a href="<?php echo base_url() ?>assets/img/portfolio/mic.jpg" class="link-preview venobox" data-gall="portfolioGallery" title="Card 3"><i class="ion ion-eye"></i></a>
-              <a href="portfolio-details.html" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-            </figure>
-
-            <div class="portfolio-info">
-              <h4><a href="portfolio-details.html">Mic</a></h4>
-              <p>Rp 10.000/Hari</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-outdoor">
-          <div class="portfolio-wrap">
-            <figure>
-              <img src="<?php echo base_url() ?>assets/img/portfolio/tenda1.jpeg" class="img-fluid" alt="">
-              <a href="<?php echo base_url() ?>assets/img/portfolio/tenda1.jpeg" class="link-preview venobox" data-gall="portfolioGallery" title="Web 1"><i class="ion ion-eye"></i></a>
-              <a href="portfolio-details.html" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-            </figure>
-
-            <div class="portfolio-info">
-              <h4><a href="portfolio-details.html">Tenda 1</a></h4>
-              <p>Rp 50.000/Hari</p>
-            </div>
-          </div>
-        </div>
-
+        <?php endforeach; ?> 
       </div>
-
+      <div class="row justify-content-center">
+        <div class="col-sm-12 col-md-6 col-lg-3 ">
+          <a class="my-cta-btn text-center" href="<?= base_url()?>user/products">Explore More</a>
+        </div>
       </div>
     </section><!-- End Portfolio Section -->
 

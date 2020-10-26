@@ -187,7 +187,28 @@
     $("#portfolio-flters li").removeClass('filter-active');
     $(this).addClass('filter-active');
 
+    console.log($(this).data('filter'));
+    
     portfolioIsotope.isotope({
+      filter: $(this).data('filter')
+    });
+    aos_init();
+  });
+
+
+
+  var cateogriIsotopeFilter = $('#products-content .content__right').isotope({
+    itemSelector: '.item-products',
+    resize: false
+  });
+
+  $('.content-left__category li').on('click', function() {
+    $(".content-left__category li").removeClass('list-category-active');
+    $(this).addClass('list-category-active');
+
+    console.log($(this).data('filter'));
+    
+    cateogriIsotopeFilter.isotope({
       filter: $(this).data('filter')
     });
     aos_init();

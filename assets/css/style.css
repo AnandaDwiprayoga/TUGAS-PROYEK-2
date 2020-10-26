@@ -1037,21 +1037,25 @@ section {
 #portfolio .portfolio-item .portfolio-info {
   background: #fff;
   text-align: center;
-  padding: 30px;
+  padding: 18px;
   height: 90px;
   border-radius: 0 0 3px 3px;
 }
 
 #portfolio .portfolio-item .portfolio-info h4 {
   font-size: 18px;
-  line-height: 1px;
   font-weight: 700;
   margin-bottom: 18px;
   padding-bottom: 0;
 }
 
 #portfolio .portfolio-item .portfolio-info h4 a {
-  color: #333;
+    color: #333;
+    width: 100%;
+    display: inherit;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 #portfolio .portfolio-item .portfolio-info h4 a:hover {
@@ -1654,3 +1658,101 @@ section {
   font-size: 13px;
   color: #ddd;
 }
+
+/* my custom css */
+.my-img-fluid {
+  max-width: unset;
+  width: 100%!important;
+  height: 100%!important;
+  object-fit: cover!important;
+}
+
+section#my-breadcrumb {
+  margin-top: 100px!important;
+}
+
+.row a.my-cta-btn.text-center {
+  width: 100%;
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 28px;
+  border-radius: 25px;
+  transition: 0.5s;
+  margin-top: 10px;
+  border: 2px solid #18d26e;
+  color: #18d26e;
+}
+.row a.my-cta-btn.text-center:hover {
+  background: #18d26e;
+  color: white;
+}
+
+section#products-content {
+  display: flex;
+}
+
+#products-content .content__left {
+  padding: 10px 60px;
+  border-right: 1px solid #d4d4d4;
+}
+
+ul.content-left__category {
+  list-style: none;
+  padding: 0;
+}
+
+.content-left__category li {
+  padding: 10px 0;
+}
+
+#products-content .content__right {
+  flex: 1;
+  padding: 30px;
+}
+
+.content-right .item-products {
+  display: flex;
+}
+
+.content__right .item-products {
+  display: flex;
+  flex-direction: row;
+  background: white;
+  height: 180px;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 25px;
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.item-products img {  width: 180px;
+  height: 180px;
+  object-fit: cover;
+}
+
+.item-products__content {
+  flex: 1;
+  padding: 35px;
+}
+
+.item-products__content h4 {color: #333;font-weight: bold;margin-bottom: 10px;}
+.content-left__category li {
+  cursor: pointer;
+}
+
+li.list-category-active {
+  font-weight: bold;
+  color: #333;
+}
+
+.content-left__category li:hover {
+  font-weight: bold;
+  color: #333;
+}
+
