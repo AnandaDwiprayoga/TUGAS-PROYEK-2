@@ -152,7 +152,7 @@
     <section id="call-to-action">
       <div class="container text-center" data-aos="zoom-in">
         <h3>Action</h3>
-        <p>Cari dan pilih barang yang kalian akan sewa sesuai kategori yang diinginka, isi form dan tentukan periode sewa seleseikan pembayaran sewa dan barang akan kalian dapatkan</p>
+        <p>Cari dan pilih barang yang kalian akan sewa sesuai kategori yang diinginkan, isi form dan tentukan periode sewa seleseikan pembayaran sewa dan barang akan kalian dapatkan</p>
         <a class="cta-btn" href="#">Browse Product</a>
       </div>
     </section><!-- End Call To Action Section -->
@@ -183,8 +183,8 @@
           <div class="col-lg-4 col-md-6 portfolio-item filter-<?= str_replace(' ', '_', $barang['nama_kategori']) ?>">
             <div class="portfolio-wrap">
               <figure>
-                <img src="<?= base_url() . $barang['gambar'] ?>" class="img-fluid my-img-fluid" alt="">
-                <a href="<?php echo base_url() ?>assets/img/portfolio/hand_blender.jpg" data-lightbox="portfolio" data-title="App 1" class="link-preview"><i class="ion ion-eye"></i></a>
+                <img src="<?= base_url() ."upload/".$barang['foto'] ?>" class="img-fluid my-img-fluid" alt="">
+                <a href="<?php echo base_url() ."upload/".$barang['foto'] ?>" data-lightbox="portfolio" data-title="App 1" class="link-preview"><i class="ion ion-eye"></i></a>
                 <a href="portfolio-details.html" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
               </figure>
 

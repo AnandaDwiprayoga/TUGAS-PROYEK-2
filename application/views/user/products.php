@@ -36,7 +36,7 @@
             <div class="content__right">
                 <?php foreach($barangs as $barang) : ?>
                     <div class="item-products filter-<?= str_replace(' ', '_', $barang['nama_kategori']) ?>">
-                        <img src="<?= base_url() . $barang['gambar'] ?>" alt="">
+                        <img src="<?= base_url() ."upload/". $barang['foto'] ?>" alt="">
                         <div class="item-products__content">
                             <h4><?= $barang['nama_barang'] ?></h4>
                             <p>Rp <?= $barang['harga'] ?>/Hari</p>
