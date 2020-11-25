@@ -8,8 +8,7 @@
 
           <nav class="nav-menu d-none d-lg-block">
             <ul>
-              <li><a href="<?= base_url() ?>user/landing">Home</a></li>
-              <li class="active" ><a href="#about">Products</a></li>
+              <li class="active" ><a href="#about"><?= $from ?></a></li>
             </ul>
           </nav><!-- .nav-menu -->
         </div>

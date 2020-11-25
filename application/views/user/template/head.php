@@ -14,9 +14,9 @@
 
   <!-- Vendor CSS Files -->
   <link href="<?php echo base_url() ?>assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="<?php echo base_url() ?>assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <!-- <link href="<?php echo base_url() ?>assets/vendor/icofont/icofont.min.css" rel="stylesheet"> -->
   <link href="<?php echo base_url() ?>assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link href="<?php echo base_url() ?>assets/vendor/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <!-- <link href="<?php echo base_url() ?>assets/vendor/ionicons/css/ionicons.min.css" rel="stylesheet"> -->
   <link href="<?php echo base_url() ?>assets/vendor/animate.css/animate.min.css" rel="stylesheet">
   <link href="<?php echo base_url() ?>assets/vendor/venobox/venobox.css" rel="stylesheet">
   <link href="<?php echo base_url() ?>assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
@@ -24,6 +24,9 @@
 
   <!-- Template Main CSS File -->
   <link href="<?php echo base_url() ?>assets/css/style.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.2.3/collection/components/icon/icon.min.css" integrity="sha512-DR9Jj0uFIfe7v1QLrvPRusRxqdSnVSVRyRBt1H8gcRQgxMKEwsOMSNYs0hyIpo8AITFyCMDC2Q1fCg1XcgdYig==" crossorigin="anonymous" />
 
   <!-- =======================================================
   * Template Name: BizPage - v3.1.1

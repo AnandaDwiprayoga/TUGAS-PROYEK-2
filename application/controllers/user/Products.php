@@ -11,6 +11,7 @@ class Products extends CI_Controller {
         
         $data['kategories'] = $this->kategori->index();
         $data['barangs'] = $this->barang->getAllBarang();
+        $data['from'] = "Products";
 
         $this->load->view('user/products', $data);
     }

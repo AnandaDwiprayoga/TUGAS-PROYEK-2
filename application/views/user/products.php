@@ -8,7 +8,7 @@
 <body>
      <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
-  <?php $this->load->view("user/template/header_products.php") ?>
+  <?php $this->load->view("user/template/header_products.php", array('from' => $from)) ?>
   </header><!-- End Header -->
 
 
@@ -40,6 +40,7 @@
                         <div class="item-products__content">
                             <h4><?= $barang['nama_barang'] ?></h4>
                             <p>Rp <?= $barang['harga'] ?>/Hari</p>
+                            <a class="my-cta-btn text-center" href="<?= base_url()?>user/products_detail/<?=$barang['id']?>">Detail</a>
                         </div>
                     </div>
                 <?php endforeach ?>

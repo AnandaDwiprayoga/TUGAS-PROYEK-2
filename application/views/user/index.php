@@ -60,8 +60,8 @@
           <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
             <div class="about-col">
               <div class="img">
-                <img src="assets/img/about-mission.jpg" alt="" class="img-fluid">
-                <div class="icon"><i class="ion-ios-speedometer-outline"></i></div>
+                <img src="<?= base_url() . "./"?>assets/img/about-mission.jpg" alt="" class="img-fluid">
+                <div class="icon"><i class="fa fa-check"></i></div>
               </div>
               <h2 class="title"><a href="#">Our Mission</a></h2>
               <p>
@@ -73,8 +73,8 @@
           <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
             <div class="about-col">
               <div class="img">
-                <img src="assets/img/about-plan.jpg" alt="" class="img-fluid">
-                <div class="icon"><i class="ion-ios-list-outline"></i></div>
+                <img src="<?= base_url() . "./"?>assets/img/about-plan.jpg" alt="" class="img-fluid">
+                <div class="icon"><i class="fa fa-check"></i></div>
               </div>
               <h2 class="title"><a href="#">Our Plan</a></h2>
               <p>
@@ -86,8 +86,8 @@
           <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
             <div class="about-col">
               <div class="img">
-                <img src="assets/img/about-vision.jpg" alt="" class="img-fluid">
-                <div class="icon"><i class="ion-ios-eye-outline"></i></div>
+                <img src="<?= base_url() . "./"?>assets/img/about-vision.jpg" alt="" class="img-fluid">
+                <div class="icon"><i class="fa fa-check"></i></div>
               </div>
               <h2 class="title"><a href="#">Our Vision</a></h2>
               <p>
@@ -184,12 +184,12 @@
             <div class="portfolio-wrap">
               <figure>
                 <img src="<?= base_url() ."upload/".$barang['foto'] ?>" class="img-fluid my-img-fluid" alt="">
-                <a href="<?php echo base_url() ."upload/".$barang['foto'] ?>" data-lightbox="portfolio" data-title="App 1" class="link-preview"><i class="ion ion-eye"></i></a>
-                <a href="portfolio-details.html" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                <a href="<?php echo base_url() ."upload/".$barang['foto'] ?>" data-lightbox="portfolio" data-title="App 1" class="link-preview"><i class="fa fa-eye"></i></a>
+                <a href="<?=  base_url() . "user/products_detail/" ?><?= $barang['id'] ?>" class="link-details" title="More Details"><i class="fa fa-question-circle"></i></a>
               </figure>
 
               <div class="portfolio-info">
-                <h4><a href="portfolio-details.html"><?= $barang['nama_barang'] ?></a></h4>
+                <h4><a href="<?=  base_url() . "user/products_detail/" ?><?= $barang['id'] ?>"><?= $barang['nama_barang'] ?></a></h4>
                 <p>Rp <?= $barang['harga'] ?>/Hari</p>
               </div>
             </div>
@@ -215,57 +215,57 @@
         <div class="owl-carousel testimonials-carousel">
 
           <div class="testimonial-item">
-            <img src="assets/img/testimonial-1.jpg" class="testimonial-img" alt="">
+            <img src="<?= base_url() . "./"?>assets/img/testimonial-1.jpg" class="testimonial-img" alt="">
             <h3>Saul Goodman</h3>
             <h4>Ceo &amp; Founder</h4>
             <p>
-              <img src="assets/img/quote-sign-left.png" class="quote-sign-left" alt="">
+              <img src="<?= base_url() . "./"?>assets/img/quote-sign-left.png" class="quote-sign-left" alt="">
               Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
-              <img src="assets/img/quote-sign-right.png" class="quote-sign-right" alt="">
+              <img src="<?= base_url() . "./"?>assets/img/quote-sign-right.png" class="quote-sign-right" alt="">
             </p>
           </div>
 
           <div class="testimonial-item">
-            <img src="assets/img/testimonial-2.jpg" class="testimonial-img" alt="">
+            <img src="<?= base_url() . "./"?>assets/img/testimonial-2.jpg" class="testimonial-img" alt="">
             <h3>Sara Wilsson</h3>
             <h4>Designer</h4>
             <p>
-              <img src="assets/img/quote-sign-left.png" class="quote-sign-left" alt="">
+              <img src="<?= base_url() . "./"?>assets/img/quote-sign-left.png" class="quote-sign-left" alt="">
               Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-              <img src="assets/img/quote-sign-right.png" class="quote-sign-right" alt="">
+              <img src="<?= base_url() . "./"?>assets/img/quote-sign-right.png" class="quote-sign-right" alt="">
             </p>
           </div>
 
           <div class="testimonial-item">
-            <img src="assets/img/testimonial-3.jpg" class="testimonial-img" alt="">
+            <img src="<?= base_url() . "./"?>assets/img/testimonial-3.jpg" class="testimonial-img" alt="">
             <h3>Jena Karlis</h3>
             <h4>Store Owner</h4>
             <p>
-              <img src="assets/img/quote-sign-left.png" class="quote-sign-left" alt="">
+              <img src="<?= base_url() . "./"?>assets/img/quote-sign-left.png" class="quote-sign-left" alt="">
               Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-              <img src="assets/img/quote-sign-right.png" class="quote-sign-right" alt="">
+              <img src="<?= base_url() . "./"?>assets/img/quote-sign-right.png" class="quote-sign-right" alt="">
             </p>
           </div>
 
           <div class="testimonial-item">
-            <img src="assets/img/testimonial-4.jpg" class="testimonial-img" alt="">
+            <img src="<?= base_url() . "./"?>assets/img/testimonial-4.jpg" class="testimonial-img" alt="">
             <h3>Matt Brandon</h3>
             <h4>Freelancer</h4>
             <p>
-              <img src="assets/img/quote-sign-left.png" class="quote-sign-left" alt="">
+              <img src="<?= base_url() . "./"?>assets/img/quote-sign-left.png" class="quote-sign-left" alt="">
               Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
-              <img src="assets/img/quote-sign-right.png" class="quote-sign-right" alt="">
+              <img src="<?= base_url() . "./"?>assets/img/quote-sign-right.png" class="quote-sign-right" alt="">
             </p>
           </div>
 
           <div class="testimonial-item">
-            <img src="assets/img/testimonial-5.jpg" class="testimonial-img" alt="">
+            <img src="<?= base_url() . "./"?>assets/img/testimonial-5.jpg" class="testimonial-img" alt="">
             <h3>John Larson</h3>
             <h4>Entrepreneur</h4>
             <p>
-              <img src="assets/img/quote-sign-left.png" class="quote-sign-left" alt="">
+              <img src="<?= base_url() . "./"?>assets/img/quote-sign-left.png" class="quote-sign-left" alt="">
               Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
-              <img src="assets/img/quote-sign-right.png" class="quote-sign-right" alt="">
+              <img src="<?= base_url() . "./"?>assets/img/quote-sign-right.png" class="quote-sign-right" alt="">
             </p>
           </div>
 
@@ -286,7 +286,7 @@
 
           <div class="col-lg-3 col-md-6">
             <div class="member" data-aos="fade-up" data-aos-delay="100">
-              <img src="assets/img/team-1.jpg" class="img-fluid" alt="">
+              <img src="<?= base_url() . "./"?>assets/img/team-1.jpg" class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>Walter White</h4>
@@ -304,7 +304,7 @@
 
           <div class="col-lg-3 col-md-6">
             <div class="member" data-aos="fade-up" data-aos-delay="200">
-              <img src="assets/img/team-2.jpg" class="img-fluid" alt="">
+              <img src="<?= base_url() . "./"?>assets/img/team-2.jpg" class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>Sarah Jhonson</h4>
@@ -322,7 +322,7 @@
 
           <div class="col-lg-3 col-md-6">
             <div class="member" data-aos="fade-up" data-aos-delay="300">
-              <img src="assets/img/team-3.jpg" class="img-fluid" alt="">
+              <img src="<?= base_url() . "./"?>assets/img/team-3.jpg" class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>William Anderson</h4>
@@ -340,7 +340,7 @@
 
           <div class="col-lg-3 col-md-6">
             <div class="member" data-aos="fade-up" data-aos-delay="400">
-              <img src="assets/img/team-4.jpg" class="img-fluid" alt="">
+              <img src="<?= base_url() . "./"?>assets/img/team-4.jpg" class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>Amanda Jepson</h4>
