@@ -1,3 +1,6 @@
+<?php 
+    $user_data = $this->session->userdata('datauser');
+?>
 <div class="container-fluid">
 
       <div class="row justify-content-center">
@@ -13,9 +16,12 @@
               <li><a href="#services">Services</a></li>
               <li><a href="<?= base_url() ?>user/products">Products</a></li>
               <li><a href="#team">Testimonials</a></li>
-              <li><a href="<?= base_url() ?>user/login">Login
-                
-              </li>
+
+              <?php if(!$user_data['username']) : ?>
+                <li><a href="<?= base_url() ?>user/login">Login</li>
+              <?php else : ?>
+                <li><a href="<?= base_url() ?>user/logout">Logout</li>
+              <?php endif ?>
               <li><a href="#contact">Contact Us</a></li>
 
             </ul>

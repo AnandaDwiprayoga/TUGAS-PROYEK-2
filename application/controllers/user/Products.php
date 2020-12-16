@@ -13,6 +13,10 @@ class Products extends CI_Controller
 		//Do your magic here
 		$this->load->model('user/kategori_model', 'kategori');
 		$this->load->model('user/CheckoutModel', 'cm');
+
+		// Check do not allowed user go to page product when they don't login
+		$user_data = $this->session->userdata('datauser');
+		if(!$user_data['username'])redirect('user/login');
 	}
 
 
