@@ -66,10 +66,6 @@ class barang_model extends CI_Model {
             $this->db->update('barang',$this, array('id' => $id));
     
         }
-
-
-    
-
     private function _uploadImage()
  {
   $this->load->helper(array('form', 'url'));

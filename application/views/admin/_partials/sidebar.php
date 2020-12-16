@@ -11,8 +11,11 @@
             <i class="fas fa-fw fa-folder"></i>
             <span>SewAja</span>
           </a>
-          <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-            <a class="dropdown-item" href="<?php echo site_url('admin/serverkue')?>">List </a>
+					<div class="dropdown-menu" aria-labelledby="pagesDropdown">
+            <a class="dropdown-item" href="<?php echo site_url('admin/kategori')?>">Kategori </a>
+						<a class="dropdown-item" href="<?php echo site_url('admin/barang')?>">Barang </a>
+						<a class="dropdown-item" href="<?php echo site_url('admin/user')?>">User </a>
+						<a class="dropdown-item" href="<?php echo site_url('admin/pembayaran')?>">Transaksi </a>
           </div>
         </li>
 

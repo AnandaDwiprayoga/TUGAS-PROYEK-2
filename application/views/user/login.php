@@ -42,7 +42,7 @@
                 
                     <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
                   </div>
-                  <form class="user" method="post" action="<?php echo base_url('user/login/prosesLogin')?>">
+                  <form class="user" method="post" action="<?php echo base_url('user/login/proses_login')?>">
                     <div class="form-group">
                       <input type="text" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Username" name="username">
                       
@@ -62,7 +62,7 @@
                   </form><br><br>
                   
                   <div class="text-center">
-                    <a class="small" href="register">Create an Account!</a>
+                    <a class="small" href=" <?php echo base_url('user/register/register')?> ">Create an Account!</a>
                   </div>
                 </div>
               </div>

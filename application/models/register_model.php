@@ -15,17 +15,18 @@ class register_model extends CI_Model {
 
     public function tambahdatauser(){
         $data=[
-            "id" => $this->input->post('id', true),
             "nama_user" => $this->input->post('nama_user', true),
             "alamat" => $this->input->post('alamat', true),
             "no_telp" => $this->input->post('no_telp', true),
             "username" => $this->input->post('username', true),
             "password" => $this->input->post('password', true),
-            "role" => $this->input->post('role', true)
-        ];
+            "role" => 1
+		];
+		
         $this->db->insert('user', $data);
         return $this->db->affected_rows(); 
-    }
+	}
+	
     
     public function getuserByID($id){
         return $this->db->get_where('user',['id'=>$id])->row_array();

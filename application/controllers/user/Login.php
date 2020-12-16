@@ -3,11 +3,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Login extends CI_Controller {
 
+	  
+    public function __construct()
+    {
+        parent::__construct();
+        $this->load->library('form_validation');
+        $this->load->model('Login_Model');
+           
+	}
+	
+
     public function index()
     {
         $this->load->view('template/header_login');
         $this->load->view('user/login');
-        $this->load->view('template/footer_login');
+		$this->load->view('template/footer_login');
+		
     }
     
     public function proses_login(){
@@ -35,11 +46,11 @@ class Login extends CI_Controller {
             if($cek->num_rows() > 0){
                 foreach($cek->result() as $ck){
                     $sess_data['username'] = $ck->username;
-                    $sess_data['role'] = $ck->role;
-
-                    $this->session->set_userdata($sess_data);
+					$sess_data['role'] = $ck->role;
+					$userdata = array('id' => $ck->id,'username' => $ck->username, 'level' => $ck->role);
+					$this->session->set_userdata('datauser', $userdata);
                 }
-                if($sess_data['role'] == 'admin'){
+                if($sess_data['role'] == 0){
 
                     $secret_key = "6LcT1PEUAAAAAE-hCl9QV89kvmbK-qAyPWTLLc69";
                     $verify = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secret_key.'&response='.$_POST['g-recaptcha-response']);
@@ -55,7 +66,7 @@ class Login extends CI_Controller {
                             redirect('user/login');
                         } 
                 }
-                else if($sess_data['role'] == 'user'){
+                else if($sess_data['role'] == 1){
                     $secret_key = "6LcT1PEUAAAAAE-hCl9QV89kvmbK-qAyPWTLLc69";
                     $verify = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secret_key.'&response='.$_POST['g-recaptcha-response']);
                     $response = json_decode($verify);
@@ -85,7 +96,7 @@ class Login extends CI_Controller {
 
     public function logout(){
         $this->session->sess_destroy();
-        redirect('admin/login');
+        redirect('user/login');
     }
 
 }

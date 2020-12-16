@@ -28,7 +28,7 @@
            <b>Isikan data diri</b>
         </div>
 
-        <form class="form-horizontal" method="post" action="<?php echo base_url().'user/register/tambah'?>">
+        <form class="form-horizontal" method="post" action="<?php echo base_url('user/register/register')?>">
             <div class="modal-body"> 
             <?php if(validation_errors()) { ?>
                 <div class="alert alert-danger" role="alert">
@@ -54,7 +54,7 @@
 
             <div class="form-group">
                 <label form="no_telp"><b>No telp </b> </label>
-                <input type="text" class="form-control" id="no_telp" name="no_telp">
+                <input type="number" class="form-control" id="no_telp" name="no_telp">
             </div>
             
             <div class="form-group">
@@ -64,7 +64,7 @@
 
             <div class="form-group">
                 <label form="password"><b>Password </b> </label>
-                <input type="text" class="form-control" id="password" name="password">
+                <input type="password" class="form-control" id="password" name="password">
             </div>
             
             </div>

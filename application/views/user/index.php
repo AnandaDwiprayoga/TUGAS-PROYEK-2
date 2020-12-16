@@ -184,8 +184,8 @@
             <div class="portfolio-wrap">
               <figure>
                 <img src="<?= base_url() ."upload/".$barang['foto'] ?>" class="img-fluid my-img-fluid" alt="">
-                <a href="<?php echo base_url() ."upload/".$barang['foto'] ?>" data-lightbox="portfolio" data-title="App 1" class="link-preview"><i class="fa fa-eye"></i></a>
-                <a href="<?=  base_url() . "user/products_detail/" ?><?= $barang['id'] ?>" class="link-details" title="More Details"><i class="fa fa-question-circle"></i></a>
+                <a href="<?= base_url() ."upload/".$barang['foto'] ?>" data-lightbox="portfolio" data-title="App 1" class="link-preview"><i class="fa fa-eye"></i></a>
+								<a href="<?= base_url() . "user/products_detail/" ?><?= $barang['id'] ?>" class="link-details" title="More Details"><i class="fa fa-question-circle"></i></a>	
               </figure>
 
               <div class="portfolio-info">

@@ -11,15 +11,10 @@
               <li class="active"><a href="<?= base_url() ?>user/landing">Home</a></li>
               <li><a href="#about">About Us</a></li>
               <li><a href="#services">Services</a></li>
-              <li><a href="#portfolio">Products</a></li>
+              <li><a href="<?= base_url() ?>user/products">Products</a></li>
               <li><a href="#team">Testimonials</a></li>
-              <li class="drop-down"><a href="">Drop Down</a>
-                <ul>
-                  <li><a href="#">Drop Down 1</a></li>
-                  <li><a href="#">Drop Down 3</a></li>
-                  <li><a href="#">Drop Down 4</a></li>
-                  <li><a href="#">Drop Down 5</a></li>
-                </ul>
+              <li><a href="<?= base_url() ?>user/login">Login
+                
               </li>
               <li><a href="#contact">Contact Us</a></li>
 

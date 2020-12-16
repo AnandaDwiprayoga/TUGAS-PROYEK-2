@@ -13,7 +13,7 @@ class Products_detail extends CI_Controller {
     public function index($idBarang)
     {
         $this->load->model('barang/barang_model', 'barang');  
-
+		$data['ses'] = $this->session->userdata('datauser');
         $data['barang'] = $this->barang->getBarang($idBarang);
         $data['from'] = "Products Detail";
         
